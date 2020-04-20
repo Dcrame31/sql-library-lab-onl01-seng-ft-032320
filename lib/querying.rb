@@ -1,5 +1,5 @@
 def select_books_titles_and_years_in_first_series_order_by_year
-  "SELECT Books.title, Books.year
+  "SELECT title, year
   FROM Books
   WHERE series_id = 1
   ORDER BY(year);"
@@ -13,7 +13,7 @@ end
 
 
 def select_value_and_count_of_most_prolific_species
-  "SELECT Characters.species, COUNT(Characters.species) AS character_count
+  "SELECT species, COUNT(species) AS character_count
   FROM Characters
   GROUP BY(species)
   ORDER BY(character_count) DESC LIMIT 1;
